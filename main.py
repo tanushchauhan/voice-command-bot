@@ -131,3 +131,42 @@ if userchoise == 2:
                         query = query.replace("john","")
                         query = query.replace("java","")
                         ytsearch(query)
+
+                    elif 'do' in query and 'homework' in query:
+                        print("John: i can not do your homework , but i can convert your text to my handwriting if you want me to do so type below or press control plus c.")
+                        speak("i can not do your homework , but i can convert your text to my handwriting if you want me to do so type below or press control plus c.")
+                        try:
+                            inputdata = input("type here: ")
+                            yt.text_to_handwriting(inputdata)
+                            speak("it is saved where you saved me")
+                            filepath = 'johnhandwriting.png'
+                            os.startfile(filepath)
+                        except:
+                            pass
+                    
+                    
+                    elif 'shutdown this computer' in query:
+                        speak("system will shutdown in a minute")
+                        yt.shutdown(time=60)
+
+
+                    elif 'cancel' in query and 'shutdown' in query:
+                        yt.cancel_shutdown()
+                        speak("shutdown canceled")  
+
+
+                    elif 'joke' in query or 'jokes' in query:
+                        My_joke = joke.get_joke(language="en", category="neutral")
+                        print(My_joke,"\n")
+                        speak(My_joke)
+
+                    else:
+                            query = query.replace("jarvis","")
+                            query = query.replace("java","")
+                            try:
+                                    print("i am still in devlopement by my maker Tanush Chauhan. i would be answering that question soon. untill then i will google it for you\n\n")
+                                    yt.search(query)
+                            except:
+                                pass
+            else :
+                pass
