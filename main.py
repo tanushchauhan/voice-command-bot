@@ -215,4 +215,52 @@ elif userchoise == 1:
                         print("According to Google\n")
                         print(results,"\n")
             
+            elif'quit' in query or 'bye' in query or 'buy' in query:
+                        print("John: leaving...,thanks for your time sir\n")
+                        exit()
+
+            elif'how are you' in query:
+                        print("i am great")
+                        speak("i am great")
             
+            elif 'open chrome' in query or 'start chrome' in query:
+                                    chro = 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome'
+                                    os.startfile(chro)
+
+            elif 'play' in query and 'youtube' in query:
+                        query = query.replace("play","")
+                        query = query.replace("youtube","")
+                        query = query.replace("on","")
+                        query = query.replace("john","")
+                        query = query.replace("java","")
+            
+            elif 'do' in query and 'homework' in query:
+                    print("John: i can not do your homework , but i can convert your text to my handwriting if you want me to do so type below or press control plus c.\n")
+
+                    try:
+                        inputdata = input("type here: ")
+                        yt.text_to_handwriting(inputdata)
+                        print("it is saved where you saved me\n")
+                        filepath = 'johnhandwriting.png'
+                        os.startfile(filepath)
+                    except:
+                        pass
+
+            elif 'shutdown this computer' in query:
+                        yt.shutdown(time=60)
+
+            elif 'cancel' in query and 'shutdown' in query:
+                        yt.cancel_shutdown()
+                       
+            elif 'joke' in query or 'jokes' in query:
+                        My_joke = joke.get_joke(language="en", category="neutral")
+                        print(My_joke,"\n")            
+                        
+            else:
+                query = query.replace("john","")
+                query = query.replace("java","")
+                try:
+                        print("i am still in devlopement by my maker Tanush Chauhan. i would be answering that question soon. untill then i will google it for you\n\n")
+                        yt.search(query)
+                except:
+                    pass
