@@ -76,11 +76,11 @@ if userchoise == 2:
         
             query = Commandle().lower()
 
-            if 'jarvis' in query or 'java' in query:        
+            if 'john' in query or 'java' in query:        
                     if 'who is' in query:
                         speak('Searching.....')
                         query = query.replace("java", "")
-                        query = query.replace("jarvis", "")
+                        query = query.replace("john", "")
                         query = query.replace("who is", "")
                         results = wikipedia.summary(query, sentences=2)
                         speak("According to Google")
@@ -92,3 +92,42 @@ if userchoise == 2:
 
                     elif 'open google' in query or 'start google' in query:
                         webbrowser.open("google.com")
+
+                    elif 'the time' in query:
+                        strTime = datetime.datetime.now().strftime("%H:%M:%S")    
+                        speak(f"Sir, the time is {strTime}")
+
+                    elif 'open vs code' in query or 'start vs code' in query:
+                        codePath = "C:\\Users\\tanus_k7afruf\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe" # add your own path here to open it
+                        os.startfile(codePath)
+                    
+                    elif 'what is' in query:
+                        speak('Searching.....')
+                        query = query.replace("java", "")
+                        query = query.replace("john", "")
+                        query = query.replace("what is", "")
+                        results = wikipedia.summary(query, sentences=2)
+                        speak("According to Google")
+                        print(results)
+                        speak(results)
+                    
+                    elif'quit' in query or 'bye' in query or 'buy' in query:
+                        print("John: leaving...,thanks for your time sir")
+                        speak('leaving...,thanks for your time sir')
+                        exit()
+
+                    elif'how are you' in query:
+                        print("i am great")
+                        speak("i am great")
+                    
+                    elif 'open chrome' in query or 'start chrome' in query:
+                                    chro = 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome'
+                                    os.startfile(chro)
+
+                    elif 'play' in query and 'youtube' in query:
+                        query = query.replace("play","")
+                        query = query.replace("youtube","")
+                        query = query.replace("on","")
+                        query = query.replace("john","")
+                        query = query.replace("java","")
+                        ytsearch(query)
