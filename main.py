@@ -170,3 +170,49 @@ if userchoise == 2:
                                 pass
             else :
                 pass
+
+
+            #This version of else can also be used but might be annoying.
+
+            # else:
+            #      print("i am still in devlopement by my maker Tanush Chauhan. i would be answering that question soon")
+            #      speak("i am still in devlopement by my maker Tanush Chauhan. i would be answering that question soon") 
+
+elif userchoise == 1:
+    greetText()
+    while(True):
+            query = input("write here:\n") 
+            if 'who is' in query:
+                        print('Searching.....\n')
+                        query = query.replace("java", "")
+                        query = query.replace("jarvis", "")
+                        query = query.replace("jarvis", "")
+                        query = query.replace("who is", "")
+                        results = wikipedia.summary(query, sentences=2)
+                        print("According to Google\n")
+                        print(results,"\n")
+
+            elif 'open youtube' in query or 'start youtube' in query:
+                        webbrowser.open("youtube.com")
+
+            elif 'open google' in query or 'start google' in query:
+                        webbrowser.open("google.com")
+
+            elif 'the time' in query:
+                        strTime = datetime.datetime.now().strftime("%H:%M:%S")    
+                        print(f"Sir, the time is {strTime}\n")
+
+            elif 'open vs code' in query or 'start vs code' in query:
+                        codePath = "C:\\Users\\tanus_k7afruf\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe" # add own path here
+                        os.startfile(codePath)
+
+            elif 'what is' in query:
+                        print('Searching.....\n')
+                        query = query.replace("java", "")
+                        query = query.replace("jarvis", "")
+                        query = query.replace("what is", "")
+                        results = wikipedia.summary(query, sentences=2)
+                        print("According to Google\n")
+                        print(results,"\n")
+            
+            
