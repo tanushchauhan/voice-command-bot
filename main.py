@@ -33,7 +33,7 @@ def greet():
     else:
         speak("Good Evening!")  
 
-    speak("I am Jarvis Sir. Please tell me how may I help you")
+    speak("I am John Sir. Please tell me how may I help you")
 
 def greetText():
     hour = int(datetime.datetime.now().hour)
@@ -46,4 +46,49 @@ def greetText():
     else:
         print("Good Evening!")  
 
-    print("I am Jarvis Sir. Please tell me how may I help you")
+    print("I am John Sir. Please tell me how may I help you")
+
+def Commandle():
+    
+
+    r = sp.Recognizer()
+    with sp.Microphone() as source:
+        print("Listening...")
+        r.pause_threshold = 0.5
+        audio = r.listen(source)
+
+    try:
+        print("Recognizing...")    
+        query = r.recognize_google(audio, language='en-in')
+        print(f"User said: {query}\n")
+
+    except Exception as e:
+           print("Say that again please...")  
+           return "None"
+    return query
+print("Start John as chat(1) or speak(2) ?")
+userchoise = int(input())
+if userchoise == 2:
+
+    if __name__ == "__main__":
+        greet()
+        while True:
+        
+            query = Commandle().lower()
+
+            if 'jarvis' in query or 'java' in query:        
+                    if 'who is' in query:
+                        speak('Searching.....')
+                        query = query.replace("java", "")
+                        query = query.replace("jarvis", "")
+                        query = query.replace("who is", "")
+                        results = wikipedia.summary(query, sentences=2)
+                        speak("According to Google")
+                        print(results)
+                        speak(results)
+
+                    elif 'open youtube' in query or 'start youtube' in query:
+                        webbrowser.open("youtube.com")
+
+                    elif 'open google' in query or 'start google' in query:
+                        webbrowser.open("google.com")
