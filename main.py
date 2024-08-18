@@ -161,7 +161,7 @@ if userchoise == 2:
                         speak(My_joke)
 
                     else:
-                            query = query.replace("jarvis","")
+                            query = query.replace("john","")
                             query = query.replace("java","")
                             try:
                                     print("i am still in devlopement by my maker Tanush Chauhan. i would be answering that question soon. untill then i will google it for you\n\n")
@@ -185,8 +185,8 @@ elif userchoise == 1:
             if 'who is' in query:
                         print('Searching.....\n')
                         query = query.replace("java", "")
-                        query = query.replace("jarvis", "")
-                        query = query.replace("jarvis", "")
+                        query = query.replace("john", "")
+                        query = query.replace("john", "")
                         query = query.replace("who is", "")
                         results = wikipedia.summary(query, sentences=2)
                         print("According to Google\n")
@@ -209,7 +209,7 @@ elif userchoise == 1:
             elif 'what is' in query:
                         print('Searching.....\n')
                         query = query.replace("java", "")
-                        query = query.replace("jarvis", "")
+                        query = query.replace("john", "")
                         query = query.replace("what is", "")
                         results = wikipedia.summary(query, sentences=2)
                         print("According to Google\n")
