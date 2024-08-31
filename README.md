@@ -22,6 +22,12 @@ Go to the project directory
   cd voice-command-bot
 ```
 
+Install dependencies
+
+```bash
+  pip install -r requirements.txt
+```
+
 Start the script
 
 ```bash
