@@ -34,9 +34,9 @@ Start the script
   python main.py
 ```
 
-## How do I add my own commmands?
+## How do I add my own commands?
 
-You can edit the main.py to add more commmands as per your liking. You can also install more modules in combine them with this script to perform custom actions.
+You can edit the main.py to add more commands to your liking. You can also install more modules and combine them with this script to perform custom actions.
 
 ## Screenshots
 
